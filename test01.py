@@ -8,7 +8,8 @@ excel_filename = file_passname + '/' + excel_filename
 wb = openpyxl.load_workbook(excel_filename)
 
 #シート名を出力する
-print(wb.get_sheet_names())
+sheetnames = wb.sheetnames
+print(sheetnames)
 #アクティブシートを取得する
 print(wb.active)
 
