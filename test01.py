@@ -27,3 +27,11 @@ print(WS1.max_column)
 #列名称と番号の変換
 print(get_column_letter(2))
 print(column_index_from_string('A'))
+
+#シートから複数の行と列を取得する(12.3.5)
+print(tuple(WS1['A1':'C3']))
+
+for row_of_cell_objects in WS1['A1':'C3']:
+    for cell_obj in row_of_cell_objects:
+        print(cell_obj.coordinate,cell_obj.value)
+    print('-- End of Row --')
